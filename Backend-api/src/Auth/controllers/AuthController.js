@@ -2,12 +2,8 @@ import { AuthService } from "../services/AuthService.js";
 
 export class AuthController {
   static async crearUsuario(req, res) {
-    
-    try { 
-
-    const usuarioId = await AuthService.crearUsuario(req.body);
-    res.status(201).json({ message: "Usuario registrado exitosamente", usuarioId });
-
+    try {
+      const usuarioId = await AuthService.crearUsuario(req.body);
       res.json(usuarioId);
     } catch (error) {
       res.status(500).json({ message: error.message });
@@ -48,6 +44,6 @@ export class AuthController {
     try {
       await AuthService.cerrarSesion(res);
       res.json({ message: "Sesión cerrada" });
-    } catch (error) { }
+    } catch (error) {}
   }
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("src/assets/registro/imagen3.jpg");
+  background-image: url("/src/assets/registro/imagen3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -90,20 +90,22 @@ main {
 
 .contenedor__login-register form {
   width: 100%;
-  padding:  20px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.15);
   position: absolute;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-content: center;
 }
 
 .contenedor__login-register form h2 {
   font-size: 30px;
-  text-align: center;   
+  text-align: center;
   margin-bottom: 20px;
-  color: rgb(12, 12, 12);
+  color: white;
 }
 
 .contenedor__login-register form input {
@@ -143,7 +145,6 @@ main {
 
 .formulario__register {
   display: none;
- 
 }
 
 @media screen and (max-width: 850px) {
